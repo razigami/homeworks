@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body onload="init();">
+    <div class="flex">
+        <h1>Homework Calculadora em JS</h1>
+        <form class="calculator">
+            <input class="dsp" type="text" id="display" value="0" readonly>
+            <div class="btn">
+                <div>
+                    <input onclick="btnClick(this)" type="button" id="btnC" value="C">
+                    <input type="button" value="?">
+                    <input onclick="btnClick(this);" type="button" id="btnDiv" value="/">
+                    <input onclick="btnClick(this);" type="button" id="btnMul" value="X">
+                </div>
+                <div>
+                    <input onclick="btnClick(this);" type="button" id="btn7" value="7">
+                    <input onclick="btnClick(this);" type="button" id="btn8" value="8">
+                    <input onclick="btnClick(this);" type="button" id="btn9" value="9">
+                    <input onclick="btnClick(this);" type="button" id="btnSub" value="-">
+                </div>
+                <div>
+                    <input onclick="btnClick(this);" type="button" id="btn4" value="4">
+                    <input onclick="btnClick(this);" type="button" id="btn5" value="5">
+                    <input onclick="btnClick(this);" type="button" id="btn6" value="6">
+                    <input onclick="btnClick(this);" type="button" id="btnPlus" value="+">
+                </div>
+                <div>
+                    <input onclick="btnClick(this);" type="button" id="btn1" value="1">
+                    <input onclick="btnClick(this);" type="button" id="btn2" value="2">
+                    <input onclick="btnClick(this);" type="button" id="btn3" value="3">
+                    <input onclick="btnClick(this);" type="button" id="btnResult" value="=">
+                </div>
+                <div>
+                    <input onclick="btnClick(this);" type="button" id="btn0" value="0">
+                    <input onclick="btnClick(this);" type="button" id="btnD" value=".">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
