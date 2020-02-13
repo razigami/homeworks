@@ -1,19 +1,19 @@
-let num1, num2, operat, estado;
-let disp;
+let num1, num2, operator, state;
+let display;
 
 function reset () {
-    estado = "1";
+    state = "1";
     num1 = "0";
     num2 = "0";
-    operat = null;
-    disp.value = "0";
+    operator = null;
+    display.value = "0";
 }
 
 function btnClick (object) {
     var click = object.value;
     if (click == '='){
         let res;
-        switch (operat){
+        switch (operator){
             case '+':
                 res = parseFloat(num1) + parseFloat(num2);
                 break;
@@ -25,17 +25,17 @@ function btnClick (object) {
                 break;
             case '/':
                 if (num2 == 0){
-                    disp.value = "🚫"
+                    display.value = "🚫";
                 }
                 else{
                 res = parseFloat(num1) / parseFloat(num2);
                 }
                 break;
         }
-        disp.value= res.toString();
+        display.value= res.toString();
         num1 = "0";
         num2 = "0";
-        estado = 1;
+        state = 1;
         return;
         
     }
@@ -44,23 +44,23 @@ function btnClick (object) {
         return;
     }
     if ((click == '+') || (click == '-') || (click == 'X') || (click == '/')) {
-        operat = click;
-        estado = "2";
+        operator = click;
+        state = "2";
         return;
     }
     if((click =='.') || (click >= '0') && (click <= '9')) { 
-        if (estado == 1) {
+        if (state == 1) {
             num1 += click;
-            disp.value = parseFloat(num1).toString();
+            display.value = parseFloat(num1).toString();
         }
-        else if (estado == 2) {
+        else if (state == 2) {
             num2 += click;
-            disp.value = parseFloat(num2).toString();
+            display.value = parseFloat(num2).toString();
         }
     }
 }
 
 function init() {
-    disp = document.getElementById ('display');
+    display = document.getElementById ('display');
     reset ();
 }
