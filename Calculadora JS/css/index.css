@@ -7,12 +7,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 .calculator {
     margin-top: 30px;
     width: 234px;
     height: 270px;
-    background-color: #7046FF;
+    background-color: rgba(0,0,0,0.4);
     display: inline-block;
 }
 .dsp {
@@ -20,17 +21,27 @@
     width: 230px;
     text-align: right;
     font-size: 26px;
-    
+    background: #ccc;
+    color: #000;
 }
 .btn input {
     height: 40px;
     width: 40px;
     margin-top: 3px;
+    border-radius: 3px;
+    box-shadow: 0 4px 0 rgba(107, 78, 24, 0.219);
+    background-color: #fff;
 }
 .btn {
     padding-top: 5px;
     padding-left: 30px;
 }
 .btn input {
-    background-color: snow;
+    background: rgba(250,100,0,0.3);
 }
+
+.btn input:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
