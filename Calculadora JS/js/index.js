@@ -10,7 +10,7 @@ function reset () {
 }
 
 function btnClick (object) {
-    var click = object.value;
+    let click = object.value;
     if (click == '='){
         let res;
         switch (operator){
@@ -25,7 +25,7 @@ function btnClick (object) {
                 break;
             case '/':
                 if (num2 == 0){
-                    display.value = "🚫";
+                    display.value = "🚫 Impossible";
                 }
                 else{
                 res = parseFloat(num1) / parseFloat(num2);
